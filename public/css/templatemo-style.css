@@ -92,7 +92,7 @@ hr {
 }
 
 @media screen and (max-width: 430px) {
-  .container { width: 95%; }
+  .container { width: 100%; }
   .tm-view-more-btn { width: 90%; padding: 15px 5px; font-size: 14px;}
 }
 
@@ -101,7 +101,7 @@ hr {
 }
 
 @media screen and (max-width: 240px) {
-  .contentElement { padding: 0px; }
+  .contentElement { padding-left: 5px; padding-right: 5px;}
 }
 
 @media screen and (max-width: 215px) {
