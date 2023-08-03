@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="PT">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		
+		<title>Patreon - CALIBRI!</title>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/templatemo-style.css">
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+	</head>
+	<style>
+		.goal-cont {
+			margin: 10px;
+			color: #3f25c3;
+		}
+
+		.goal-cont p {
+			color: white;
+		}
+
+		#title {
+			font-size: 28px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: center;
+			text-shadow: 0px 0px 10px #000;
+			margin: 0;
+			width: 70%;
+			z-index: 1;
+		}
+
+		#goal-bar {
+			border: 4px solid ;
+			/*background: linear-gradient(#ead8d6, #ead8d6) 50% 50%/calc(100% - 8px) calc(100% - 8px) no-repeat,
+            			linear-gradient(270deg, #ead8d6 0%, #892dd8 33%, #3f25c3 100%);*/
+			border-radius: 6px;
+
+			padding: 16px;
+			display: flex;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#goal-current {
+			text-align: left;
+		}
+
+		#goal-total,
+		#goal-current {
+			margin: 0;
+			font-weight: bold;
+			font-size: 28px;
+			text-shadow: 0px 0px 10px #000;
+			width: 15%;
+			z-index: 1;
+		}
+
+		#goal-total {
+			text-align: right;
+		}
+
+		#total-bar {
+			position: absolute;
+			width: calc(0% - 8px);
+			height: calc(100% - 8px);
+			max-width: 100%;
+			background: rgb(234,216,214);
+			background: linear-gradient(90deg, rgba(234,216,214,1) 0%, rgba(137,45,216,1) 35%, rgba(63,37,195,1) 100%);
+			top: 4px;
+			left: 4px;
+			overflow: hidden;
+			border-radius: 6px;
+		}
+	</style>
+	<body>
+		<section id="home" class="templatemo-home">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-1"></div>
+					<div class="col-md-8 col-sm-10 contentElement">
+						<div class='goal-cont'>
+							<div style='position: relative'>
+								<div id='goal-bar'>
+									<p id='goal-current'>X</p>
+									<p id='title'></p>
+									<p id='goal-total'>X</p>
+									<div id='total-bar'></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-1"></div>
+				</div>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    	<script src="script.js"></script>
+	</body>
+</html>
