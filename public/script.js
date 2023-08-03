@@ -7,7 +7,8 @@ function getData() {
             //$('#total-bar').width(data.patronCount);
             //data.patronCount = 48178;
             let percent = (data.patronCount * 100) / data.maxPatronos;
-
+            if(percent > 100) percent = 100;
+            
             $('#goal-current').text(data.patronCount);
             $('#total-bar').width("calc(" + percent + '% - 8px)');
             $('#goal-total').text(data.maxPatronos);

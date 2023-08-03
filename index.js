@@ -1,17 +1,16 @@
 const axios = require('axios');
 const express = require('express');
 const app = express();
+require('dotenv').config();
 
 app.use(express.static('public'));
 app.set('view engine', 'html');
 
 app.get('/getData', (req, res) => {
-    let otherVars = require('./otherVars.json');
-
     axios({
         method: 'GET',
         url: 'https://www.patreon.com/api/oauth2/v2/identity?fields%5Buser%5D=about,full_name,image_url,thumb_url,vanity',
-        headers: { Authorization: `Bearer ${otherVars.tokenCreator}` }
+        headers: { Authorization: `Bearer ${process.env.TOKEN_CREATOR}` }
     }).then(function (response) {
 
         let data = [
@@ -24,13 +23,13 @@ app.get('/getData', (req, res) => {
     
         axios({
             method: 'GET',
-            url: `https://www.patreon.com/api/oauth2/v2/campaigns/${otherVars.campaignId}?fields%5Bcampaign%5D=patron_count`,
-            headers: { Authorization: `Bearer ${otherVars.tokenCreator}` }
+            url: `https://www.patreon.com/api/oauth2/v2/campaigns/${process.env.CAMPAIGN_ID}?fields%5Bcampaign%5D=patron_count`,
+            headers: { Authorization: `Bearer ${process.env.TOKEN_CREATOR}` }
         }).then(function (response) {
             let patronCount = response.data.data.attributes.patron_count;
             
             const randomNumber = Math.floor(Math.random() * 100);
-            let maxPatronos = otherVars.maxPatronos;
+            let maxPatronos = process.env.MAX_PATRONOS;
             res.json({ data, patronCount, randomNumber, maxPatronos });
         });
     });
