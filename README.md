@@ -1,4 +1,4 @@
-# Patreon-ProgressBar
+# PatreonCounter-StreamBar
 | **Percentage** |                  **Result**                 |
 |:--------------:|:-------------------------------------------:|
 |     **0%**     | <img src="https://i.imgur.com/xhEB25y.png"> |
@@ -17,12 +17,13 @@
 |    Patreon Account   |   [Patreon](https://patreon.com)   |        - - - -       |    ✅   |
 
 # 📌 How to use
+**commands for Operative System: Ubuntu 22.04*
 ```console
 # Clone this repository
-git clone https://github.com/RobertoValente/ovh-backup.git
+git clone https://github.com/RobertoValente/PatreonCounter-StreamBar.git
 
 # Navigate to the folder
-cd ovh-backup
+cd PatreonCounter-StreamBar
 
 # Install all dependencies of the project
 npm install
@@ -30,51 +31,10 @@ npm install
 # Rename the file '.env.example' to '.env'
 mv .env.example .env
 
-# Change "XXXXXX" to the correct information (tips inside of '.env')
+# Change "XXX" to the correct information (tips inside of '.env')
 nano .env
 
 # Run the project
 npm start
 ```
-- For **change the time of any action**, feel free to change <code>* * * * *</code>  of the lines that contains it.
-```js
-// => Examples:
-
-cron.schedule('* * * * *', () => {
-    let msg = `Executed every minute`;
-    let cronType = 'EveryMinute';
-    // Code here
-    sendWhatsappMessage(msg, cronType);
-}, {scheduled: true, timezone: 'Europe/Lisbon'});
-
-cron.schedule('0 0 0 ? * * *', () => {
-    let msg = `Executed one time per day at midnight`;
-    let cronType = 'ExecutedAtMidnight';
-    // Code here
-    sendWhatsappMessage(msg, cronType);
-}, {scheduled: true, timezone: 'Europe/Lisbon'});
-
-```
-- **To help you get the exacly time**, visit the site: https://www.freeformatter.com/cron-expression-generator-quartz.html
-
-# 📌 To Run in Background and Infinitely
-<em>*can be different for other devices/operating systems than Raspberry Pi Zero W</em>
-```console
-# Inside of 'ovh-backup.service', replace '<path>' to the current path of your project
-# To see your current path, execute 'pwd' in terminal
-
-# Add execetuable permission to 'index.js'
-chmod +x index.js
-
-# Copy the service file to '/etc/systemd/system'
-sudo cp ovh-backup.service /etc/systemd/system
-
-# Start the service
-systemctl start ovh-backup.service
-
-# To launch the service in boot
-systemctl enable ovh-backup.service
-
-# To you see the logs
-journalctl -u ovh-backup.service
-```
+- If you want host it for it's possible to import into StreamLabs, try [render.com](https://ender.com).
