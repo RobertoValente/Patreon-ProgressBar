@@ -5,7 +5,6 @@ function getData() {
         dataType: 'json',
         success: function(data) {
             //$('#total-bar').width(data.patronCount);
-            data.patronCount = 48178;
             let percent = (data.patronCount * 100) / data.maxPatronos;
             if(percent > 100) percent = 100;
             
