@@ -4,11 +4,10 @@ function getData() {
         url: '/getData',
         dataType: 'json',
         success: function(data) {
-            //$('#total-bar').width(data.patronCount);
             let percent = (data.patronCount * 100) / data.maxPatronos;
             if(percent > 100) percent = 100;
             
-            $('#goal-current').text(data.patronCount);
+            $('#goal-current').text(data.patronCount + " Patronos");
             $('#total-bar').width("calc(" + percent + '% - 8px)');
             $('#goal-total').text(data.maxPatronos);
         },
