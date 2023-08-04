@@ -28,7 +28,7 @@ app.get('/getData', (req, res) => {
             headers: { Authorization: `Bearer ${process.env.TOKEN_CREATOR}` }
         }).then(function (response) {
             console.log("=========== DAQUI ===========")
-            console.log(response.data)
+            console.log(response.data.included)
             console.log("========== ATÉ AQUI =========")
             //let patronCount = response.data.data.attributes.patron_count;
             
