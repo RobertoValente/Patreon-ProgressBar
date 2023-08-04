@@ -23,14 +23,19 @@ app.get('/getData', (req, res) => {
     
         axios({
             method: 'GET',
-            url: `https://www.patreon.com/api/oauth2/v2/campaigns/${process.env.CAMPAIGN_ID}?fields%5Bcampaign%5D=patron_count`,
+            //url: `https://www.patreon.com/api/oauth2/v2/campaigns/${process.env.CAMPAIGN_ID}?fields%5Bcampaign%5D=patron_count`,
+            url: `https://www.patreon.com/api/oauth2/v2/campaigns/${process.env.CAMPAIGN_ID}/members?${encodeURI('include=currently_entitled_tiers,address&fields[member]=full_name,is_follower,last_charge_date,last_charge_status,lifetime_support_cents,currently_entitled_amount_cents,patron_status&fields[tier]=amount_cents,created_at,description,discord_role_ids,edited_at,patron_count,published,published_at,requires_shipping,title,url&fields[address]=addressee,city,line_1,line_2,phone_number,postal_code,state')}`,
             headers: { Authorization: `Bearer ${process.env.TOKEN_CREATOR}` }
         }).then(function (response) {
-            let patronCount = response.data.data.attributes.patron_count;
+            console.log("=========== DAQUI ===========")
+            console.log(response.data)
+            console.log("========== ATÉ AQUI =========")
+            //let patronCount = response.data.data.attributes.patron_count;
             
-            const randomNumber = Math.floor(Math.random() * 100);
-            let maxPatronos = process.env.MAX_PATRONOS;
-            res.json({ data, patronCount, randomNumber, maxPatronos });
+            //const randomNumber = Math.floor(Math.random() * 100);
+            //let maxPatronos = process.env.MAX_PATRONOS;
+            //res.json({ data, patronCount, randomNumber, maxPatronos });
+            res.send('Vê as logs do site, mete num bloco de notas oq aparece entre `=========== DAQUI ===========` e `========== ATÉ AQUI =========` e manda-me sfv');
         });
     });
 });
