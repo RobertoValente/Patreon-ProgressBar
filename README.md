@@ -1,12 +1,12 @@
-# PatreonCounter-StreamBar
+# 📶 PatreonCounter-StreamBar
+- This was a work maded by me, to a Portuguese Youtuber use it on his Livestream.
+- This bar displays the actual number of Patreons for a specific account (like a Donation Bar on Twitch).
+
 | **Percentage** |                  **Result**                 |
 |:--------------:|:-------------------------------------------:|
 |     **0%**     | <img src="https://i.imgur.com/xhEB25y.png"> |
 |     **50%**    | <img src="https://i.imgur.com/dn4gXY5.png"> |
 |    **100%**    | <img src="https://i.imgur.com/XJI645w.png"> |
-
-➜ **Project asked by a Portugues YouTuber ([Pedro Lourenço](https://www.youtube.com/@pedrolllourenco))** maded with success! He **will use it for a LiveStream** on his channel.
-<br>But for who doesn't understand, this is a Patreon Counter like the Sub Counter for Twitch Subs.
 
 # 📌 Requirements
 | Software |                   Donwload Link                   | Older Version Tested | Status |
