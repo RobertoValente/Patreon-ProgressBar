@@ -37,4 +37,4 @@ nano .env
 # Run the project
 npm start
 ```
-- If you want host it for it's possible to import into StreamLabs, try [render.com](https://ender.com).
+- If you want host it and be able to import into StreamLabs, try [render.com](https://ender.com).
